@@ -9,26 +9,27 @@ const PORT = process.env.PORT || 8000;
 
 //variables
 let currentUser = null;
-
-let friendArr = [];
+let selectUser = null;
 
 
 const friendly = (user) => {
+    let friendArr = [];
     user.friends.forEach(friend => {
         friendArr.push(users.find(user => user.id === friend))
     });
     console.log(friendArr);
+    return friendArr;
 };
 
 
 
 const handleHome = (req, res) => {
     if (!currentUser) {res.redirect('/signin'); return};
-    friendly(currentUser);
+    let friendArray = friendly(currentUser);
     res.render('pages/homepage', {
         title: `Welcome ${currentUser}`,
         user: currentUser,
-        friendsArr: friendArr
+        friendArr: friendArray
     });
 };
 
@@ -41,9 +42,16 @@ const handleSignin = (req, res) => {
 
 const handleUser = (req, res) => {
     if (!currentUser) {res.redirect('/signin'); return};
-
     let id = req.params.id;
-    res.send(`User id is ${id}`);
+    selectUser = users.filter((user) => user.id == id);
+    console.log(selectUser);
+    let friendArray = friendly(selectUser);
+    console.log(friendArray);
+    res.render('pages/user', {
+        title:`Visiting ${selectUser.name}`,
+        user: selectUser,
+        friendArr: friendArray
+    });
 };
 
 const handleName = (req, res) => {

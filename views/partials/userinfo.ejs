@@ -1,13 +1,16 @@
 
-<h2><%- user.name %></h2>
-<div class="avatar">
+<div class="user">
+    <h2><%- user.name %></h2>
     <img src="<%- user.avatarUrl %>" alt="">
 </div>
 
-<div class="friends">
-    <% 
-    friendArr.forEach(friend => {
-        
-    })
-    %> 
-</div>
+
+    
+<ul class="friends">
+    <li class="friend"><h2>Friends</h2></li>
+    <% friendArr.forEach(friend => { %>
+        <li class="friend">
+            <h3><%- friend.name %> </h3><img src="<%- friend.avatarUrl %> " alt="Friend">
+        </li>
+    <% }); %> 
+    </ul>

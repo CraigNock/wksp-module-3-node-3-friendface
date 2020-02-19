@@ -1,0 +1,32 @@
+
+$color-green : rgb(39, 116, 72);
+
+.sitetitle {
+    color: white;
+    background-color: $color-green;
+    padding: 2rem;
+    font-size: 3rem;
+};
+
+.signin-form{
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width : fit-content;
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px 5px lightgrey;
+};
+
+.signin-form > label, .signin-form > input, .signin-form > button {
+    text-align: center;
+    margin: .5rem;
+};
+
+.signin-form > button {
+    background-color: $color-green;
+    color: white;
+    font-weight: bold;
+};

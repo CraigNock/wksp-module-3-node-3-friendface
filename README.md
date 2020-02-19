@@ -81,7 +81,7 @@ There is `/data/users.js` file that contains an array of `user` objects. Everyon
 
 ### Notable Methods and Code Snippets
 
-These are methods and bits of code that yuo will most likely need.
+These are methods and bits of code that you will most likely need.
 
 - `res.redirect()`
 - `array.find()`

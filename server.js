@@ -13,6 +13,7 @@ let selectUser = null;
 
 
 const friendly = (user) => {
+    console.log(user);
     let friendArr = [];
     user.friends.forEach(friend => {
         friendArr.push(users.find(user => user.id === friend))
@@ -43,7 +44,7 @@ const handleSignin = (req, res) => {
 const handleUser = (req, res) => {
     if (!currentUser) {res.redirect('/signin'); return};
     let id = req.params.id;
-    selectUser = users.filter((user) => user.id == id);
+    selectUser = users.find((user) => user.id == id);
     console.log(selectUser);
     let friendArray = friendly(selectUser);
     console.log(friendArray);

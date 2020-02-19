@@ -33,6 +33,7 @@ $color-green : rgb(39, 116, 72);
 
 .user {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     width: fit-content;

@@ -1,6 +1,21 @@
 
 $color-green : rgb(0, 196, 105);
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-green;
+}
+
+.lunk {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 2rem;
+}
+
 .sitetitle {
     color: white;
     background-color: $color-green;

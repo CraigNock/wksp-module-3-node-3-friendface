@@ -83,6 +83,19 @@ codeblock {
   margin: 12px 32px 6px 0;
   padding: 12px 14px; }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00c469; }
+
+.lunk {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 2rem; }
+
 .sitetitle {
   color: white;
   background-color: #00c469;

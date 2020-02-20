@@ -30,8 +30,6 @@ const unfriendly = (user) => {
     return friendArr;
 }
 
-
-
 const handleHome = (req, res) => {
     if (!currentUser) {res.redirect('/signin'); return};
     let friendArray = friendly(currentUser);
@@ -49,6 +47,11 @@ const handleSignin = (req, res) => {
     });
 };
 
+const handleSignout = (req, res) => {
+    currentUser = null;
+    res.redirect('/');
+}
+
 const handleFinder = (req, res) => {
     let friendArray = unfriendly(currentUser);
     res.render('pages/find', {
@@ -57,14 +60,24 @@ const handleFinder = (req, res) => {
     })
 };
 
+const userUpdate = (action, id) =>{
+    users.forEach(user => {
+        if (user.id === currentUser.id){
+            user.friends.push(id);// fix action what which?
+        }
+    })
+}
+
 const handleAddRem = (req, res) => {
     let id = req.params.id;
     let action = req.params.action;
 
     if(action === 'add'){
         currentUser.friends.push(id);
+        
     } else {
     currentUser.friends = currentUser.friends.filter(friend => friend !== id);
+
     }
     res.redirect('/');
 };
@@ -105,6 +118,8 @@ express()
     .get('/', handleHome)
 
     .get('/signin', handleSignin)
+
+    .get('/signout', handleSignout)
 
     .get('/user/:id', handleUser)
 

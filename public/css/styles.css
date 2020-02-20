@@ -163,6 +163,14 @@ a > img {
 .intro {
   margin: 3rem; }
 
+.addremove {
+  border: 5px solid #00c469;
+  padding: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #00c469; }
+
 body {
   background: #fafafa;
   display: flex;

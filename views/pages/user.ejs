@@ -1,5 +1,14 @@
 <%- include ('../partials/header', {}) %>
 
+<% if (currentUser.friends.includes(user.id)){ 
+    let action = 'remove'; %>
+    <a href="<%- `/friend/${user.id}/${action}`%>"><%-`${action}`%> Friend!</a>
+
+    <% } else {
+        let action = 'add' %>
+        <a href="<%- `/friend/${user.id}/${action}`%>"><%-`${action}`%> Friend!</a>
+    <% }; %>
+
 <div class="content">
 <%- include ('../partials/userinfo', {}) %> 
 </div>

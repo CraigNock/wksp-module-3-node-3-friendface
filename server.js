@@ -13,7 +13,6 @@ let selectUser = null;
 
 
 const friendly = (user) => {
-    console.log(user);
     let friendArr = [];
     user.friends.forEach(friend => {
         friendArr.push(users.find(user => user.id === friend))
@@ -21,6 +20,15 @@ const friendly = (user) => {
     console.log(friendArr);
     return friendArr;
 };
+
+const unfriendly = (user) => {
+    let friendArr = users;
+    friendArr = friendArr.filter(user => user.id !== currentUser.id);
+    user.friends.forEach(friend => {
+        friendArr = friendArr.filter(user => user.id !== friend)
+    });
+    return friendArr;
+}
 
 
 
@@ -41,6 +49,26 @@ const handleSignin = (req, res) => {
     });
 };
 
+const handleFinder = (req, res) => {
+    let friendArray = unfriendly(currentUser);
+    res.render('pages/find', {
+        title : 'Friend Finder',
+        friendArr: friendArray
+    })
+};
+
+const handleAddRem = (req, res) => {
+    let id = req.params.id;
+    let action = req.params.action;
+
+    if(action === 'add'){
+        currentUser.friends.push(id);
+    } else {
+    currentUser.friends = currentUser.friends.filter(friend => friend !== id);
+    }
+    res.redirect('/');
+};
+
 const handleUser = (req, res) => {
     if (!currentUser) {res.redirect('/signin'); return};
     let id = req.params.id;
@@ -51,7 +79,8 @@ const handleUser = (req, res) => {
     res.render('pages/user', {
         title:`Visiting ${selectUser.name}`,
         user: selectUser,
-        friendArr: friendArray
+        friendArr: friendArray,
+        currentUser: currentUser
     });
 };
 
@@ -79,7 +108,12 @@ express()
 
     .get('/user/:id', handleUser)
 
+    .get('/find', handleFinder)
+
     .get('/getname', handleName)
+    
+    .get('/friend/:id/:action', handleAddRem)
+
 
     .get('*', (req, res) => {
         res.status(404);

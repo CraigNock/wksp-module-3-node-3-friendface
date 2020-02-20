@@ -1,14 +1,6 @@
-
-<div class="user">
-    <h2><%- user.name %></h2>
-    <img src="<%- user.avatarUrl %>" alt="user avatar">
-</div>
-
-
-    
 <ul class="friends">
-    <li class="friend"><h2>Friends</h2></li>
-    <li class="friend"><a href="/find" class="findbutt">Find More Friends</a></li>
+    <li class="intro"><h2>Strangers are just Friends you haven't Friended yet.</h2></li>
+
     <% friendArr.forEach(friend => { %>
         <li class="friend">
             <h3><%- friend.name %> </h3>

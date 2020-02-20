@@ -85,7 +85,7 @@ codeblock {
 
 .sitetitle {
   color: white;
-  background-color: #277448;
+  background-color: #00c469;
   padding: 2rem;
   font-size: 3rem; }
 
@@ -105,7 +105,7 @@ codeblock {
   margin: .5rem; }
 
 .signin-form > button {
-  background-color: #277448;
+  background-color: #00c469;
   color: white;
   font-weight: bold; }
 
@@ -115,7 +115,7 @@ codeblock {
   flex-direction: column;
   align-items: center;
   width: fit-content;
-  background-color: #d3f8c8;
+  background-color: #fcfbdd;
   margin: 0; }
 
 .user > h2 {
@@ -128,27 +128,40 @@ codeblock {
   border: 3px solid steelblue; }
 
 .friends {
-  background-color: #d3f8c8;
+  background-color: #fcfbdd;
   padding: 1rem;
   flex: 1; }
 
+.findbutt {
+  border-radius: 20px;
+  border: transparent;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1rem;
+  background-color: #00c469;
+  color: white;
+  font-weight: bold; }
+
 .friend {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: 2px solid teal;
-  border-radius: 50px;
-  background-color: #acc6ff;
+  border-radius: 10px;
   padding: 1rem;
   width: 20rem;
   color: #004444;
-  margin: 0 auto; }
+  margin: .5rem auto; }
 
-.friend > img {
+a > img {
   border: 3px solid teal;
   border-radius: 50px;
   width: 100px;
   margin: 0 2rem; }
+
+.intro {
+  margin: 3rem; }
 
 body {
   background: #fafafa;
@@ -170,8 +183,7 @@ body {
 
 .content {
   display: flex;
-  flex-direction: column;
-  margin-top: 24px; }
+  flex-direction: column; }
 
 .box {
   border: 1px solid #707070;

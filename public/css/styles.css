@@ -114,7 +114,7 @@ label {
   padding: 3rem;
   font-size: 2rem;
   font-weight: bold;
-  box-shadow: 3px 3px 10px 5px lightgrey; }
+  box-shadow: 3px 3px 10px 5px #b68787; }
 
 .signin-form > label, .signin-form > input, .signin-form > button {
   text-align: center;
@@ -142,7 +142,8 @@ label {
 
 .user > img {
   border-radius: 50px;
-  border: 3px solid steelblue; }
+  border: 3px solid #0F1924;
+  box-shadow: 3px 3px 10px 5px #b68787; }
 
 .friends {
   background-color: #fcfbdd;
@@ -164,18 +165,19 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid teal;
+  border: 2px solid #0F1924;
   border-radius: 10px;
   padding: 1rem;
   width: 20rem;
-  color: #004444;
+  color: #0F1924;
   margin: .5rem auto; }
 
 a > img {
-  border: 3px solid teal;
+  border: 3px solid #596869;
   border-radius: 50px;
   width: 100px;
-  margin: 0 2rem; }
+  margin: 0 2rem;
+  box-shadow: 3px 3px 10px 5px #b68787; }
 
 .intro {
   margin: 3rem; }
@@ -209,6 +211,8 @@ body {
 .content {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  height: 100vh;
   font-family: 'Trade Winds', cursive; }
 
 .box {

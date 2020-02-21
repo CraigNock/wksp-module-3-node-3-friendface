@@ -34,7 +34,7 @@ const handleHome = (req, res) => {
     if (!currentUser) {res.redirect('/signin'); return};
     let friendArray = friendly(currentUser);
     res.render('pages/homepage', {
-        title: `Welcome ${currentUser}`,
+        title: `Welcome ${currentUser.name}`,
         user: currentUser,
         friendArr: friendArray
     });

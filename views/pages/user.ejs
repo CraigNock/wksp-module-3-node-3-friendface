@@ -2,11 +2,11 @@
 
 <% if (currentUser.friends.includes(user.id)){ 
     let action = 'remove'; %>
-    <a class="addremove" href="<%- `/friend/${user.id}/${action}`%>"><%-`${action}`%> Friend!</a>
+    <a class="addremove" href="<%- `/friend/${user.id}/${action}`%>"><%-`${action}`%> Morsel!</a>
 
     <% } else {
         let action = 'add' %>
-        <a class="addremove" href="<%- `/friend/${user.id}/${action}`%>"><%-`${action}`%> Friend!</a>
+        <a class="addremove" href="<%- `/friend/${user.id}/${action}`%>"><%-`${action}`%> Morsel!</a>
     <% }; %>
 
 <div class="content">

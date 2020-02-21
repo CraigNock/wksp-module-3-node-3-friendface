@@ -51,7 +51,7 @@ ol, ul {
   margin-bottom: 1em; }
 
 h1, h2, h3, h4 {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Trade Winds', cursive; }
 
 h1 {
   font-size: 36px; }
@@ -67,14 +67,14 @@ h4 {
   font-size: 20px; }
 
 p, li, a, blockquote, span {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Trade Winds', cursive;
   font-size: 17px;
   font-weight: 300;
   line-height: 1.5em; }
 
 code, codeblock {
   background: #eaeaea;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Trade Winds', cursive;
   font-size: 14px;
   padding: 0 4px; }
 
@@ -87,7 +87,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #00c469; }
+  background-color: #530B17; }
+
+label {
+  font-family: 'Trade Winds', cursive; }
 
 .lunk {
   text-decoration: none;
@@ -98,7 +101,7 @@ header {
 
 .sitetitle {
   color: white;
-  background-color: #00c469;
+  background-color: #530B17;
   padding: 2rem;
   font-size: 3rem; }
 
@@ -115,10 +118,11 @@ header {
 
 .signin-form > label, .signin-form > input, .signin-form > button {
   text-align: center;
-  margin: .5rem; }
+  margin: .5rem;
+  font-family: 'Trade Winds', cursive; }
 
 .signin-form > button {
-  background-color: #00c469;
+  background-color: #530B17;
   color: white;
   font-weight: bold; }
 
@@ -152,7 +156,7 @@ header {
   height: 100%;
   margin: 0;
   padding: 1rem;
-  background-color: #00c469;
+  background-color: #530B17;
   color: white;
   font-weight: bold; }
 
@@ -177,12 +181,12 @@ a > img {
   margin: 3rem; }
 
 .addremove {
-  border: 5px solid #00c469;
+  border: 5px solid #530B17;
   padding: 1rem;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
-  color: #00c469; }
+  color: #530B17; }
 
 body {
   background: #fafafa;
@@ -197,14 +201,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Trade Winds', cursive;
     color: slategray; }
     .main.four-oh-four .title {
       font-size: 96px; }
 
 .content {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  font-family: 'Trade Winds', cursive; }
 
 .box {
   border: 1px solid #707070;

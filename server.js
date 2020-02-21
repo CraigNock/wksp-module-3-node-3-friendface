@@ -60,10 +60,10 @@ const handleFinder = (req, res) => {
     })
 };
 
-const userUpdate = (action, id) =>{
+const userUpdate = () =>{
     users.forEach(user => {
         if (user.id === currentUser.id){
-            user.friends.push(id);// fix action what which?
+            user = currentUser;
         }
     })
 }
@@ -71,14 +71,12 @@ const userUpdate = (action, id) =>{
 const handleAddRem = (req, res) => {
     let id = req.params.id;
     let action = req.params.action;
-
     if(action === 'add'){
         currentUser.friends.push(id);
-        
     } else {
     currentUser.friends = currentUser.friends.filter(friend => friend !== id);
-
     }
+    userUpdate();
     res.redirect('/');
 };
 

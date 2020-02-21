@@ -1,11 +1,15 @@
 
-$color-green : rgb(0, 196, 105);
+$color-green : #530B17;
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $color-green;
+}
+
+label {
+    font-family: 'Trade Winds', cursive;
 }
 
 .lunk {
@@ -38,6 +42,7 @@ header {
 .signin-form > label, .signin-form > input, .signin-form > button {
     text-align: center;
     margin: .5rem;
+    font-family: 'Trade Winds', cursive;
 };
 
 .signin-form > button {

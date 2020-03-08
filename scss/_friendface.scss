@@ -1,0 +1,129 @@
+
+$color-green : #530B17;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-green;
+}
+
+label {
+    font-family: 'Trade Winds', cursive;
+}
+
+.lunk {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 2rem;
+}
+
+.sitetitle {
+    color: white;
+    background-color: $color-green;
+    padding: 2rem;
+    font-size: 3rem;
+};
+
+.signin-form{
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width : fit-content;
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px 5px rgb(182, 135, 135);
+};
+
+.signin-form > label, .signin-form > input, .signin-form > button {
+    text-align: center;
+    margin: .5rem;
+    font-family: 'Trade Winds', cursive;
+};
+
+.signin-form > button {
+    background-color: $color-green;
+    color: white;
+    font-weight: bold;
+};
+
+.user {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    background-color: rgb(252, 251, 221);
+    margin: 0;
+}
+
+.user > h2 {
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+.user > img {
+    border-radius: 50px;
+    border: 3px solid #0F1924;
+    box-shadow: 3px 3px 10px 5px rgb(182, 135, 135);
+}
+
+.friends {
+    background-color: rgb(252, 251, 221);
+    padding: 1rem;
+    flex: 1;
+
+}
+
+.findbutt {
+    border-radius: 20px;
+    border: transparent;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+    background-color: $color-green;
+    color: white;
+    font-weight: bold;
+}
+
+.friend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #0F1924;
+    border-radius: 10px;
+    // background-color: rgb(172, 198, 255);
+    padding: 1rem;
+    width: 20rem;
+    color: #0F1924;
+    margin: .5rem auto;
+}
+
+a > img {
+    border: 3px solid #596869;
+    border-radius: 50px;
+    width: 100px;
+    margin: 0 2rem;
+    box-shadow: 3px 3px 10px 5px rgb(182, 135, 135);
+}
+
+//finder
+.intro {
+    margin: 3rem;
+}
+
+.addremove {
+    border: 5px solid $color-green;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $color-green;
+}

@@ -1,0 +1,20 @@
+
+<div class="user">
+    <h2><%- user.name %></h2>
+    <img src="<%- user.avatarUrl %>" alt="user avatar">
+</div>
+
+
+    
+<ul class="friends">
+    <li class="friend"><h2>Friends</h2></li>
+    <li class="friend"><a href="/find" class="findbutt">Find More Ingredients!</a></li>
+    <% friendArr.forEach(friend => { %>
+        <li class="friend">
+            <h3><%- friend.name %> </h3>
+            <a href="<%- `/user/${friend.id}` %> ">
+                <img src="<%- friend.avatarUrl %> " alt="Friend">
+            </a>
+        </li>
+    <% }); %> 
+</ul>

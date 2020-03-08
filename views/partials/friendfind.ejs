@@ -1,0 +1,12 @@
+<ul class="friends">
+    <li class="intro"><h2>Strangers are just Friends you haven't eaten yet.</h2></li>
+
+    <% friendArr.forEach(friend => { %>
+        <li class="friend">
+            <h3><%- friend.name %> </h3>
+            <a href="<%- `/user/${friend.id}` %> ">
+                <img src="<%- friend.avatarUrl %> " alt="Friend">
+            </a>
+        </li>
+    <% }); %> 
+</ul>

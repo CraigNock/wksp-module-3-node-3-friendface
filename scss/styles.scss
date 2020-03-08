@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab:300&display=swap');
 @import 'reset';
 @import 'typography';
+@import 'friendface';
 
 body {
     background: #fafafa;
@@ -17,7 +18,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Trade Winds', cursive;
         color: slategray;
 
         .title {
@@ -29,7 +30,9 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Trade Winds', cursive;
 }
 
 .box {
